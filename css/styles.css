@@ -1,0 +1,151 @@
+body {
+	background-color: #f7ecde;
+	color: #352e28;
+}
+
+::selection {
+	color: #352e28;
+	background-color: rgb(254, 194, 96);
+}
+
+header .container {
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 2px;
+	border-style: dotted;
+	border-color: #352e28;
+}
+
+.pacifico {
+	font-family: "Pacifico", cursive;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 50px;
+	line-height: 60px;
+	color: #352e28;
+	position: relative;
+	width: fit-content;
+
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		bottom: 48px;
+		left: 0;
+		right: 0;
+		top: 90px;
+		background-color: rgb(254, 194, 96);
+		transition: all 0.3s;
+	}
+
+	&:hover::before {
+		top: 70px;
+	}
+}
+
+.text-gradient {
+	color: #41a65c;
+	background-image: linear-gradient(90deg, #41a65c, #b3aa49 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	font-size: 25px;
+	line-height: 30px;
+	font-family: Righteous, cursive;
+	font-weight: 500;
+
+	width: fit-content;
+	.last {
+		color: #b3aa49;
+	}
+}
+
+section .container label {
+	font-weight: 600;
+	font-family: "PT Sans Caption", sans-serif;
+}
+
+section .container input {
+	font-family: "PT Sans Caption", sans-serif;
+}
+
+.btn-submit {
+	--bs-btn-color: #fff;
+	--bs-btn-bg: #d1512d;
+	--bs-btn-border-color: #d1512d;
+	--bs-btn-hover-color: #fff;
+	--bs-btn-hover-bg: #bb4120;
+	--bs-btn-hover-border-color: #a03315;
+
+	font-family: "PT Sans Caption", sans-serif;
+}
+
+section.form .container {
+	border-bottom: #352e28 dotted 2px;
+}
+
+table {
+	font-family: "PT Sans Caption", sans-serif;
+}
+
+section.form input:focus {
+	border-color: rgb(217, 156, 57);
+	box-shadow: 0 0 0 0.25rem rgba(217, 156, 57, 0.25);
+}
+
+.btn-visit {
+	--bs-btn-color: #fff;
+	--bs-btn-bg: #9eb23b;
+	--bs-btn-border-color: #90a235;
+	--bs-btn-hover-color: #fff;
+	--bs-btn-hover-bg: rgb(138, 158, 35);
+	--bs-btn-hover-border-color: rgb(110, 126, 30);
+	font-family: "PT Sans Caption", sans-serif;
+}
+
+.circle {
+	width: 20px;
+	height: 20px;
+}
+
+.error-layer {
+	background-color: rgba(0, 0, 0, 0.385);
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+
+	font-family: "Bree Serif", serif;
+}
+.error-popup {
+	max-width: 500px;
+	background-color: white;
+	border-radius: 5px;
+	padding: 30px 25px;
+
+	h2 {
+		font-size: 21px;
+		line-height: 27px;
+	}
+
+	.text-content svg {
+		padding: 4.25px 5px;
+	}
+}
+
+.pt-sans-caption-regular {
+	font-family: "PT Sans Caption", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 27px;
+}
+
+@media (max-width: 576px) {
+	.xs-smaller-font {
+		font-size: 21px;
+	}
+}

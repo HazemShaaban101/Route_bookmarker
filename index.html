@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bookmarker by Hazem Shaaban</title>
+		<link rel="icon" href="./images/bookmark.png" />
+
+		<!-- fonts from google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+			rel="stylesheet" />
+
+		<!-- font awesome CSS -->
+		<link rel="stylesheet" href="./css/all.min.css" />
+		<!-- bootstrap CSS -->
+		<link rel="stylesheet" href="./css/bootstrap.min.css" />
+		<!-- styles CSS -->
+		<link rel="stylesheet" href="./css/styles.css" />
+	</head>
+	<body>
+		<!-- interractive logo -->
+		<header>
+			<div class="container">
+				<h1 class="pacifico py-5 my-2 mx-auto">Bookmarker</h1>
+			</div>
+		</header>
+
+		<!-- input form section -->
+		<section class="form">
+			<div class="container">
+				<p class="text-gradient mx-auto my-4 xs-smaller-font">
+					<i class="fa-solid fa-bookmark first"></i> Bookmark your
+					favorite sites <i class="fa-solid fa-bookmark last"></i>
+				</p>
+				<label for="floatingInput1" class="my-2"
+					><i class="fa-solid fa-book-bookmark mx-2"></i> Site Name
+				</label>
+				<input
+					class="form-control"
+					id="website-name"
+					type="text"
+					oninput="validateInput(this)"
+					placeholder="Bookmark Name"
+					aria-label=".form-control-sm example" />
+				<label for="floatingInput2" class="mb-2 mt-4"
+					><i class="fa-solid fa-link mx-2"></i> Site URL
+				</label>
+				<input
+					class="form-control"
+					id="website-url"
+					type="text"
+					oninput="validateInput(this)"
+					placeholder="Website URL"
+					aria-label=".form-control-sm example" />
+
+				<div class="d-flex justify-content-center">
+					<button
+						type="button"
+						onclick="createBookmark()"
+						class="btn btn-submit my-4 px-5">
+						Submit
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- bookmarks table -->
+		<section class="mt-4">
+			<div class="container">
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col" class="text-center">index</th>
+							<th scope="col" class="text-center">
+								Website name
+							</th>
+							<th scope="col" class="text-center">Visit</th>
+							<th scope="col" class="text-center">Delete</th>
+						</tr>
+					</thead>
+					<tbody id="bookmarks"></tbody>
+				</table>
+			</div>
+		</section>
+
+		<!-- Error screen layer -->
+		<section
+			id="error-layer"
+			class="error-layer d-none vh-100 w-100 d-flex justify-content-center align-items-center">
+			<div class="error-popup">
+				<div
+					class="first-row d-flex justify-content-between align-items-center">
+					<div class="circles d-flex gap-2">
+						<div
+							class="circle bg-danger rounded-circle opacity-75"></div>
+						<div
+							class="circle bg-warning rounded-circle opacity-75"></div>
+						<div
+							class="circle bg-success rounded-circle opacity-75"></div>
+					</div>
+					<button
+						class="exit-button border-0 bg-white"
+						onclick="closeErrorMessage()">
+						<i class="fa-solid fa-xmark fa-2xl align-text-top"></i>
+					</button>
+				</div>
+				<div class="text-content pt-4">
+					<h2>
+						Site Name or Url is not valid, Please follow the rules
+						below :
+					</h2>
+					<p class="pt-sans-caption-regular align-middle mt-4">
+						<span class="align-top px-1"
+							><i
+								class="fa-solid fa-arrow-right fa-xs border-3 fa-border rounded-circle border-danger text-danger"></i
+						></span>
+						Site name must contain at least 3 characters
+					</p>
+					<p class="pt-sans-caption-regular align-middle">
+						<span class="align-top px-1"
+							><i
+								class="fa-solid fa-arrow-right fa-xs border-3 fa-border rounded-circle border-danger text-danger"></i
+						></span>
+						Site URL must be a valid one
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- font awesome JS -->
+		<script src="./js/all.min.js"></script>
+		<!-- bootstrap JS -->
+		<script src="./js/bootstrap.bundle.min.js"></script>
+		<!-- index JS -->
+		<script src="./js/index.js"></script>
+	</body>
+</html>
