@@ -96,7 +96,7 @@ function validateInput(element) {
 	var regex = {
 		"website-name": /[a-zA-Z0-9]{3,}/,
 		"website-url":
-			/^(http(s){0,1}:\/\/){0,1}(www\.){0,1}\w+(\.\w{1,}){0,}\.\w{2,}(\/\w{1,}){0,}$/i,
+			/^(http(s){0,1}:\/\/){0,1}(www\.){0,1}\w+(\.\w{1,}){0,}\.\w{2,}(\/\w{1,}){0,}(\/\w{1,}\.\w{2,4}){0,1}$/i,
 	};
 
 	if (regex[element.id].test(element.value) === true) {
